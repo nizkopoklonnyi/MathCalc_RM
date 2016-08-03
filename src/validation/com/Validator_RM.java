@@ -26,7 +26,7 @@ public class Validator_RM extends Validator{
 		 Matcher m = p.matcher(expression);
 		 
 		 if(m.matches()){
-			 System.out.println("выражение корректно");
+			 // System.out.println("выражение корректно");
 			 mAnlizator.analize(expression);
 			
 		 }
