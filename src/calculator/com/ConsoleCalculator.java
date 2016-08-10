@@ -20,7 +20,7 @@ public class ConsoleCalculator extends Calculator{
 	/**method for calculates*/
 	public void calculate(String expression) {
 
-		//if expression correct calculate
+		//if expression correct- calculate
 		if(validator.check(expression)){
 		
 			if(analizator.getOperator().compareTo("-")==0)

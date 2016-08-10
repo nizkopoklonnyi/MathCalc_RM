@@ -31,7 +31,7 @@ public class Validator_RM extends Validator{
 		 }
 		 catch(Exception e){
 			 e.getMessage();
-			 System.out.println("введенное выражение не корректно");
+			 System.out.println("Expression is not correct");
 			 return false;
 		 }
 		 
