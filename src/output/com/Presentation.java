@@ -7,19 +7,33 @@ import java.io.IOException;
 public class Presentation {
 
 	/**print the calculator result	*/
-	public void print(Double result){
-		printToConsole(result);
+	public void printResult(Double result){
+		printResultToConsole(result);
 	}
 	/** implemented*/
-	private void printToConsole(Double result){
+	private void printResultToConsole(Double result){
 		System.out.println("= "+result);
 	}
 	/** don't implemented*/
-	private void printToFile(Double  result){
+	private void printResultToFile(Double  result){
 		//...
 	}
 	/** don't implemented*/
-	private void printToWebPage(Double result){
+	private void printResultToWebPage(Double result){
 		//...
 	}
+	
+	/**print the application expression*/
+	public void print(String expression){
+		printToConsole(expression);
+	}
+	
+	private void printToConsole(String expression){
+		System.out.println(expression);
+	}
+	
+	private void printToWebPage(String expression){
+		//...
+	}
+	
 }

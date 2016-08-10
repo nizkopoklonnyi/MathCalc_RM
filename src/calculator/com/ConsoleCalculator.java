@@ -20,22 +20,23 @@ public class ConsoleCalculator extends Calculator{
 	/**method for calculates*/
 	public void calculate(String expression) {
 
-		validator.check(expression);
+		//if expression correct calculate
+		if(validator.check(expression)){
 		
-		if(analizator.getOperator().compareTo("-")==0)
-			result.print(analizator.getOperand1()-analizator.getOperand2());
-		if(analizator.getOperator().compareTo("+")==0)
-		    result.print( analizator.getOperand1()+analizator.getOperand2());
-		if(analizator.getOperator().compareTo("*")==0)
-			result.print(analizator.getOperand1()*analizator.getOperand2());
-		if(analizator.getOperator().compareTo("^")==0)
-			result.print(Math.pow(analizator.getOperand1(),analizator.getOperand2()));
-		if(analizator.getOperator().compareTo("%")==0)
-			result.print(analizator.getOperand1()%analizator.getOperand2());
-		if(analizator.getOperator().compareTo("/")==0)
-			result.print(analizator.getOperand1()/analizator.getOperand2());
-
-				
+			if(analizator.getOperator().compareTo("-")==0)
+				result.printResult(analizator.getOperand1()-analizator.getOperand2());
+			if(analizator.getOperator().compareTo("+")==0)
+			    result.printResult( analizator.getOperand1()+analizator.getOperand2());
+			if(analizator.getOperator().compareTo("*")==0)
+				result.printResult(analizator.getOperand1()*analizator.getOperand2());
+			if(analizator.getOperator().compareTo("^")==0)
+				result.printResult(Math.pow(analizator.getOperand1(),analizator.getOperand2()));
+			if(analizator.getOperator().compareTo("%")==0)
+				result.printResult(analizator.getOperand1()%analizator.getOperand2());
+			if(analizator.getOperator().compareTo("/")==0)
+				result.printResult(analizator.getOperand1()/analizator.getOperand2());
+		}
+			
 	}
 
 }

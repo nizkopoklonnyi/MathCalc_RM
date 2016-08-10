@@ -25,13 +25,15 @@ public class Validator_RM extends Validator{
 		 Pattern p = Pattern.compile(exprRegex);
 		 Matcher m = p.matcher(expression);
 		 
-		 if(m.matches()){
-			 // System.out.println("выражение корректно");
+		 try{
+			 m.matches();
 			 mAnlizator.analize(expression);
-			
 		 }
-		 else
+		 catch(Exception e){
+			 e.getMessage();
 			 System.out.println("введенное выражение не корректно");
+			 return false;
+		 }
 		 
 		 return true;
 	}
